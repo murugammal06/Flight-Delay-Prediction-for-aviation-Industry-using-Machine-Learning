@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prediction Flight Delay</title>
+<script type="text/javascript">
+function validate()
+ {
+  if(dept>actdept)
+   alert("The flight will be on the time");
+  else
+   alert("The flight will not be in the time");
+ }
+</script>
+<style>
+body
+{
+background-image:url("delay.jpg");
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100%100%;
+}
+</style>
+</head>
+<body>
+<h1>Prediction Flight Delay</h1>
+<form action="/prediction" method="POST">  
+<br>
+<label>origin</label>
+<select>
+<option value="msp">MSP</option>
+<option value="dtw">DTW</option>
+<option value="jfk">JFK</option>
+<option value="sea">SEA</option>
+<option value="alt">ALT</option>
+</br>
+</select>
+<br><br>
+<label>destination</label>
+<select>
+<option value="msp">MSP</option>
+<option value="dtw">DTW</option>
+<option value="jfk">JFK</option>
+<option value="sea">SEA</option>
+<option value="alt">ALT</option>
+</br></br>
+</select>
+<br><br>
+<label for="flight">flightnum</label>
+<input type="text" name="name" placeholder="Flight Number">
+</br></br>
+<br>
+<label for="month">month</label>
+<input type="text" name="month" placeholder="Month">
+</br>
+<br>
+<label for="daymonth">daymonth</label>
+<input type="text" name="dayofmonth" placeholder="Day of Month">
+</br>
+<br>
+<label for="dayweek">dayweek</label>
+<input type="text" name="dayofweek" placeholder="Day of Week">
+</br>
+<br>
+<label for="scheduleddeptime">scheduleddeptime</label>
+<input type="text" name="dept" placeholder="Scheduled Departure Time">
+</br>
+<br>
+<label for="scheduledartime">scheduledartime</label>
+<input type="text" name="scheduledartime" placeholder="Scheduled Arrival Time">
+</br>
+<br>
+<label for="actualdeptime">actualdeptime</label>
+<input type="text" name="actdept" placeholder="Actual Departure Time">
+</br>
+<br>
+<input type="button" value="submit" onclick="validate()">
+</br>
+</form>
+</body>
+</html>
